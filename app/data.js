@@ -1,0 +1,117 @@
+// NestEgg seed data: the Alvarez household's real-looking demo books.
+// Amounts are USD. November 2026 is the live month; September and October
+// give the Reports view its six-month trend a past to stand on.
+
+export const CATEGORIES = [
+  { id: "groceries", name: "Groceries", kind: "expense", color: "#1d4a38", icon: "🛒" },
+  { id: "dining", name: "Dining out", kind: "expense", color: "#e8a33d", icon: "🍽" },
+  { id: "transport", name: "Transport", kind: "expense", color: "#2f6f8f", icon: "🚗" },
+  { id: "housing", name: "Housing", kind: "expense", color: "#6b4fa1", icon: "🏠" },
+  { id: "utilities", name: "Utilities", kind: "expense", color: "#7a9e4b", icon: "💡" },
+  { id: "kids", name: "Kids & school", kind: "expense", color: "#d96a4f", icon: "🎒" },
+  { id: "health", name: "Health", kind: "expense", color: "#4fa08a", icon: "✚" },
+  { id: "fun", name: "Fun & streaming", kind: "expense", color: "#c98bb9", icon: "🎬" },
+  { id: "clothing", name: "Clothing", kind: "expense", color: "#8a6d4b", icon: "👕" },
+  { id: "other", name: "Everything else", kind: "expense", color: "#8a938c", icon: "•" },
+  { id: "salary", name: "Salary", kind: "income", color: "#1d4a38", icon: "💼" },
+  { id: "freelance", name: "Freelance", kind: "income", color: "#2f6f8f", icon: "✎" },
+  { id: "other-in", name: "Other income", kind: "income", color: "#8a938c", icon: "↩" },
+];
+
+export const BUDGETS = [
+  { category: "groceries", limit: 850 },
+  { category: "dining", limit: 260 },
+  { category: "transport", limit: 400 },
+  { category: "housing", limit: 1850 },
+  { category: "utilities", limit: 450 },
+  { category: "kids", limit: 380 },
+  { category: "health", limit: 180 },
+  { category: "fun", limit: 120 },
+  { category: "clothing", limit: 150 },
+  { category: "other", limit: 100 },
+];
+
+export const BILLS = [
+  { id: "b1", name: "Mortgage — First Community Bank", amount: 1850, day: 1, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b2", name: "Electric — City Power", amount: 132, day: 12, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b3", name: "Water & sewer", amount: 68, day: 15, autopay: false, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b4", name: "Internet — Fiber 500", amount: 79, day: 18, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b5", name: "Phones — family plan (4 lines)", amount: 145, day: 21, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b6", name: "Car insurance — two cars", amount: 212, day: 25, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b7", name: "Gym — family membership", amount: 89, day: 3, autopay: false, paid: ["2026-09", "2026-10", "2026-11"] },
+  { id: "b8", name: "Streaming bundle", amount: 32, day: 9, autopay: true, paid: ["2026-09", "2026-10", "2026-11"] },
+];
+
+export const GOALS = [
+  { id: "g1", name: "Emergency fund", target: 12000, saved: 8450, note: "Six months of essentials, for the month nobody plans for." },
+  { id: "g2", name: "Summer road trip — Yellowstone", target: 2400, saved: 1475, note: "Gas, two motels, park passes and a lot of snacks." },
+  { id: "g3", name: "Mia's braces", target: 3800, saved: 1200, note: "Ortho quoted $3,800; paying it off before ninth grade." },
+  { id: "g4", name: "New water heater", target: 1600, saved: 1600, note: "Done — the old one gave up in October. 🎉" },
+];
+
+// id, date, name, category, amount (positive = money in, negative = money out)
+export const TRANSACTIONS = [
+  // ---- November 2026 (the live month) ----
+  { id: "t-nov-01", date: "2026-11-01", name: "Salary — Dana (Nov)", category: "salary", amount: 3850 },
+  { id: "t-nov-02", date: "2026-11-01", name: "Salary — Marco (Nov)", category: "salary", amount: 3420 },
+  { id: "t-nov-03", date: "2026-11-01", name: "Mortgage — First Community Bank", category: "housing", amount: -1850 },
+  { id: "t-nov-04", date: "2026-11-02", name: "Weekly shop — GreenMart", category: "groceries", amount: -168.42 },
+  { id: "t-nov-05", date: "2026-11-03", name: "Gym — family membership", category: "health", amount: -89 },
+  { id: "t-nov-06", date: "2026-11-04", name: "School lunches — Mia & Leo", category: "kids", amount: -46 },
+  { id: "t-nov-07", date: "2026-11-05", name: "Gas — Shell, Marco's car", category: "transport", amount: -52.3 },
+  { id: "t-nov-08", date: "2026-11-06", name: "Pizza night — Tony's", category: "dining", amount: -38.75 },
+  { id: "t-nov-09", date: "2026-11-07", name: "Weekly shop — GreenMart", category: "groceries", amount: -142.9 },
+  { id: "t-nov-10", date: "2026-11-08", name: "Freelance — logo for bakery", category: "freelance", amount: 420 },
+  { id: "t-nov-11", date: "2026-11-09", name: "Streaming bundle", category: "fun", amount: -32 },
+  { id: "t-nov-12", date: "2026-11-10", name: "Kids' shoes — Leo", category: "clothing", amount: -64.99 },
+  { id: "t-nov-13", date: "2026-11-11", name: "Pharmacy — flu shots x2", category: "health", amount: -58 },
+  { id: "t-nov-14", date: "2026-11-12", name: "Electric — City Power", category: "utilities", amount: -132 },
+  { id: "t-nov-15", date: "2026-11-13", name: "Weekly shop — GreenMart", category: "groceries", amount: -187.65 },
+  { id: "t-nov-16", date: "2026-11-14", name: "Birthday dinner — Dana's mom", category: "dining", amount: -96.4 },
+  { id: "t-nov-17", date: "2026-11-15", name: "Water & sewer", category: "utilities", amount: -68 },
+  { id: "t-nov-18", date: "2026-11-16", name: "Bus passes — Mia & Leo", category: "transport", amount: -72 },
+  { id: "t-nov-19", date: "2026-11-17", name: "Soccer cleats — Leo", category: "kids", amount: -54.5 },
+  { id: "t-nov-20", date: "2026-11-18", name: "Internet — Fiber 500", category: "utilities", amount: -79 },
+  { id: "t-nov-21", date: "2026-11-19", name: "Weekly shop — GreenMart", category: "groceries", amount: -159.2 },
+  { id: "t-nov-22", date: "2026-11-20", name: "Takeout — Thai Orchid", category: "dining", amount: -44.2 },
+  { id: "t-nov-23", date: "2026-11-21", name: "Phones — family plan", category: "utilities", amount: -145 },
+  { id: "t-nov-24", date: "2026-11-22", name: "Gas — Shell, Dana's car", category: "transport", amount: -47.85 },
+  { id: "t-nov-25", date: "2026-11-23", name: "Library fine + book fair", category: "kids", amount: -18.5 },
+  { id: "t-nov-26", date: "2026-11-24", name: "Thanksgiving groceries — GreenMart", category: "groceries", amount: -214.36 },
+  { id: "t-nov-27", date: "2026-11-25", name: "Refund — returned jacket", category: "other-in", amount: 42.5 },
+  { id: "t-nov-28", date: "2026-11-25", name: "Movie night — cinema x4", category: "fun", amount: -58 },
+  { id: "t-nov-29", date: "2026-11-26", name: "Car insurance — two cars", category: "transport", amount: -212 },
+  // ---- October 2026 (for trends) ----
+  { id: "t-oct-01", date: "2026-10-01", name: "Salary — Dana (Oct)", category: "salary", amount: 3850 },
+  { id: "t-oct-02", date: "2026-10-01", name: "Salary — Marco (Oct)", category: "salary", amount: 3420 },
+  { id: "t-oct-03", date: "2026-10-01", name: "Mortgage — First Community Bank", category: "housing", amount: -1850 },
+  { id: "t-oct-04", date: "2026-10-03", name: "Weekly shop — GreenMart", category: "groceries", amount: -171.2 },
+  { id: "t-oct-05", date: "2026-10-06", name: "New water heater — installed", category: "housing", amount: -1600 },
+  { id: "t-oct-06", date: "2026-10-07", name: "Weekly shop — GreenMart", category: "groceries", amount: -158.75 },
+  { id: "t-oct-07", date: "2026-10-10", name: "Dinner — Olive Garden", category: "dining", amount: -87.3 },
+  { id: "t-oct-08", date: "2026-10-12", name: "Electric — City Power", category: "utilities", amount: -141 },
+  { id: "t-oct-09", date: "2026-10-14", name: "Weekly shop — GreenMart", category: "groceries", amount: -183.4 },
+  { id: "t-oct-10", date: "2026-10-15", name: "Water & sewer", category: "utilities", amount: -71 },
+  { id: "t-oct-11", date: "2026-10-17", name: "Braces — first payment", category: "health", amount: -400 },
+  { id: "t-oct-12", date: "2026-10-19", name: "Weekly shop — GreenMart", category: "groceries", amount: -166.9 },
+  { id: "t-oct-13", date: "2026-10-21", name: "Phones — family plan", category: "utilities", amount: -145 },
+  { id: "t-oct-14", date: "2026-10-22", name: "Gas — both cars", category: "transport", amount: -98.4 },
+  { id: "t-oct-15", date: "2026-10-24", name: "Halloween costumes x2", category: "kids", amount: -73.25 },
+  { id: "t-oct-16", date: "2026-10-26", name: "Car insurance — two cars", category: "transport", amount: -212 },
+  { id: "t-oct-17", date: "2026-10-28", name: "Weekly shop — GreenMart", category: "groceries", amount: -149.55 },
+  { id: "t-oct-18", date: "2026-10-30", name: "Freelance — menu design", category: "freelance", amount: 260 },
+  // ---- September 2026 (for trends) ----
+  { id: "t-sep-01", date: "2026-09-01", name: "Salary — Dana (Sep)", category: "salary", amount: 3850 },
+  { id: "t-sep-02", date: "2026-09-01", name: "Salary — Marco (Sep)", category: "salary", amount: 3420 },
+  { id: "t-sep-03", date: "2026-09-01", name: "Mortgage — First Community Bank", category: "housing", amount: -1850 },
+  { id: "t-sep-04", date: "2026-09-05", name: "Weekly shop — GreenMart", category: "groceries", amount: -164.8 },
+  { id: "t-sep-05", date: "2026-09-08", name: "School supplies — both kids", category: "kids", amount: -132.6 },
+  { id: "t-sep-06", date: "2026-09-12", name: "Weekly shop — GreenMart", category: "groceries", amount: -177.3 },
+  { id: "t-sep-07", date: "2026-09-15", name: "Electric — City Power", category: "utilities", amount: -156 },
+  { id: "t-sep-08", date: "2026-09-19", name: "Weekly shop — GreenMart", category: "groceries", amount: -152.45 },
+  { id: "t-sep-09", date: "2026-09-21", name: "Phones — family plan", category: "utilities", amount: -145 },
+  { id: "t-sep-10", date: "2026-09-24", name: "Dinner — sushi night", category: "dining", amount: -78.9 },
+  { id: "t-sep-11", date: "2026-09-26", name: "Weekly shop — GreenMart", category: "groceries", amount: -169.1 },
+  { id: "t-sep-12", date: "2026-09-28", name: "Car insurance — two cars", category: "transport", amount: -212 },
+  { id: "t-sep-13", date: "2026-09-29", name: "Gas — both cars", category: "transport", amount: -91.75 },
+];

@@ -1,0 +1,9 @@
+今晚 make.fun 家庭预算比赛开赛后，重建并提交参赛作品。
+
+比赛：best-household-budget-site-20261126-1457，2026-11-26 22:57 CST 开赛，第一轮 2026-11-27 16:57 CST 截止。注意：白天已建好的版本（仓库 YMWD-Pixel/best-household-budget-site-20261126-1457，commit 2348a90）是在开赛前建的，不能用——make.fun 会查 repo_created_after_open 和 transcripts，旧仓库/旧会话提交会失败。
+
+工作：
+1. 用 ~/workspace/custom-skills/make-fun/ 的 skill，按当天上午扫描流程重新做一个家庭预算网站（全新会话、全新仓库，仓库名要新，例如 best-household-budget-site-20261126-2300），功能与白天版本相当或更好。
+2. 比赛已开（22:57 已过），直接提交。这是今天第 3 个提交（上午已交 2 个：news-image-20261126、best-flight-game-20261126-0057），正好用完今天 3 个名额。只交免入场费的。
+3. 提交成功后，把 submission ID 记到 ~/workspace/makefun/entries.md，领取码记到 ~/workspace/makefun/claims.md（600 权限），并向主聊天汇报 submission ID 和结果时间。不要领取奖金、不要动钱包，未经 YM 同意不要做任何收费操作。
+4. 如果提交失败（例如比赛状态异常），如实汇报原因，不要反复重试。不要编辑 MEMORY.md；日常观察记到 ~/memory/YYYY-MM-DD.md。
